@@ -3,8 +3,8 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="2000px" height="800px" viewBox="0 0 2000 800" enable-background="new 0 0 2000 800" xml:space="preserve">
-<g id="Black_Key_2_">
-	<g id="background_outer_2_">
+<g id="Black_Key_1_">
+	<g id="background_outer_3_">
 		<path fill="#0F0F0F" d="M231.5,462.883c0,8.349-5.373,15.117-12,15.117h-76c-6.627,0-12-6.769-12-15.117V41h100V462.883z"/>
 		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="181.5" y1="478" x2="181.5" y2="41.0005">
 			<stop  offset="0" style="stop-color:#4B4B4B"/>
@@ -13,7 +13,7 @@
 		<path fill="url(#SVGID_1_)" d="M229.5,43v419.883c0,7.232-4.486,13.117-10,13.117h-76c-5.514,0-10-5.885-10-13.117V43H229.5
 			 M231.5,41h-100v421.883c0,8.349,5.373,15.117,12,15.117h76c6.627,0,12-6.769,12-15.117V41L231.5,41z"/>
 	</g>
-	<g id="bevel_stroke_2_">
+	<g id="bevel_stroke_5_">
 		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="181.5" y1="44" x2="181.5" y2="471.2251">
 			<stop  offset="0" style="stop-color:#323232"/>
 			<stop  offset="1" style="stop-color:#3C3C3C"/>
@@ -21,7 +21,7 @@
 		<path fill="url(#SVGID_2_)" d="M224,46v410.375c0,7.097-4.567,12.85-10.2,12.85h-64.6c-5.633,0-10.2-5.753-10.2-12.85V46H224
 			 M226,44h-2h-85h-2v2v410.375c0,8.188,5.473,14.85,12.2,14.85h64.6c6.727,0,12.2-6.661,12.2-14.85V46V44L226,44z"/>
 	</g>
-	<g id="background_inner_2_">
+	<g id="background_inner_5_">
 		<path fill="#0F0F0F" d="M224,456.375c0,7.097-4.567,12.85-10.2,12.85h-64.6c-5.633,0-10.2-5.753-10.2-12.85V41h85V456.375z"/>
 	</g>
 	<linearGradient id="front_side_1_" gradientUnits="userSpaceOnUse" x1="181.5" y1="466" x2="181.5" y2="411">
@@ -32,9 +32,9 @@
 		<stop  offset="0.9346" style="stop-color:#767676"/>
 		<stop  offset="1" style="stop-color:#808080"/>
 	</linearGradient>
-	<path id="front_side_2_" fill="url(#front_side_1_)" d="M201.93,411c6.692,0,11.325,5.232,12,12c1.239,12.433,2.36,24.985,3,33
+	<path id="front_side_3_" fill="url(#front_side_1_)" d="M201.93,411c6.692,0,11.325,5.232,12,12c1.239,12.433,2.36,24.985,3,33
 		c0.56,7.016-0.308,10-7,10H153.07c-6.692,0-7.56-2.984-7-10c0.64-8.015,1.761-20.567,3-33c0.675-6.768,5.308-12,12-12H201.93z"/>
-	<g id="top_side_2_">
+	<g id="top_side_5_">
 		<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="181.5" y1="405" x2="181.5" y2="44.0005">
 			<stop  offset="0" style="stop-color:#808080"/>
 			<stop  offset="1" style="stop-color:#323232"/>
@@ -48,7 +48,11 @@
 		<path fill="url(#SVGID_4_)" d="M217,46v346.77c0,5.641-4.589,10.23-10.229,10.23h-50.541c-5.641,0-10.229-4.589-10.229-10.23V46
 			H217 M219,44h-75v348.77c0,6.755,5.475,12.23,12.229,12.23h50.541c6.754,0,12.229-5.476,12.229-12.23V44L219,44z"/>
 	</g>
-	<polygon id="corner_right_1_" fill="#505050" points="151,410.25 146,414.667 146,403.5 151,406.75 	"/>
-	<polygon id="corner_left_1_" fill="#505050" points="212,410.25 217,414.667 217,403.5 212,406.75 	"/>
+	<polygon id="corner_right_2_" fill="#505050" points="151,410.25 146,414.667 146,403.5 151,406.75 	"/>
+	<polygon id="corner_left_2_" fill="#505050" points="212,410.25 217,414.667 217,403.5 212,406.75 	"/>
 </g>
+<path id="white_key_2" fill="#FFFFFF" d="M341,41v699c0,12.15,9.85,22,22,22h116c12.15,0,22-9.85,22-22V484.5
+	c0-3.59-2.91-6.5-6.5-6.5H458c-6.627,0-12-6.769-12-15.117V41H341z"/>
+<path id="white_key_1_1_" fill="#FFFFFF" d="M336,41v699c0,12.15-9.85,22-22,22H198c-12.15,0-22-9.85-22-22V484.5
+	c0-3.59,2.91-6.5,6.5-6.5h37c6.627,0,12-6.769,12-15.117V41H336z"/>
 </svg>
