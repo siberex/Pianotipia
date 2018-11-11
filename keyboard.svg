@@ -51,8 +51,34 @@
 	<polygon id="corner_right_2_" fill="#505050" points="151,410.25 146,414.667 146,403.5 151,406.75 	"/>
 	<polygon id="corner_left_2_" fill="#505050" points="212,410.25 217,414.667 217,403.5 212,406.75 	"/>
 </g>
-<path id="white_key_2" fill="#FFFFFF" d="M341,41v699c0,12.15,9.85,22,22,22h116c12.15,0,22-9.85,22-22V484.5
-	c0-3.59-2.91-6.5-6.5-6.5H458c-6.627,0-12-6.769-12-15.117V41H341z"/>
-<path id="white_key_1_1_" fill="#FFFFFF" d="M336,41v699c0,12.15-9.85,22-22,22H198c-12.15,0-22-9.85-22-22V484.5
-	c0-3.59,2.91-6.5,6.5-6.5h37c6.627,0,12-6.769,12-15.117V41H336z"/>
+<g id="white_key_2">
+	<linearGradient id="SVGID_11_" gradientUnits="userSpaceOnUse" x1="421" y1="762" x2="421" y2="41.0005">
+		<stop  offset="0" style="stop-color:#EBEBEB"/>
+		<stop  offset="1" style="stop-color:#FFFFFF"/>
+	</linearGradient>
+	<path fill="url(#SVGID_11_)" d="M341,41v699c0,12.15,9.85,22,22,22h116c12.15,0,22-9.85,22-22V484.5c0-3.59-2.91-6.5-6.5-6.5H458
+		c-6.627,0-12-6.769-12-15.117V41H341z"/>
+	<linearGradient id="SVGID_12_" gradientUnits="userSpaceOnUse" x1="421" y1="762" x2="421" y2="41.0005">
+		<stop  offset="0" style="stop-color:#B4B4B4"/>
+		<stop  offset="1" style="stop-color:#F0F0F0"/>
+	</linearGradient>
+	<path fill="url(#SVGID_12_)" d="M444,43v419.883c0,9.438,6.28,17.117,14,17.117h36.5c2.481,0,4.5,2.019,4.5,4.5V740
+		c0,11.028-8.972,20-20,20H363c-11.028,0-20-8.972-20-20V43H444 M446,41H341v699c0,12.15,9.85,22,22,22h116c12.15,0,22-9.85,22-22
+		V484.5c0-3.59-2.91-6.5-6.5-6.5H458c-6.627,0-12-6.769-12-15.117V41L446,41z"/>
+</g>
+<g id="white_key_1_1_">
+	<linearGradient id="SVGID_13_" gradientUnits="userSpaceOnUse" x1="256" y1="762" x2="256" y2="41.0005">
+		<stop  offset="0" style="stop-color:#EBEBEB"/>
+		<stop  offset="1" style="stop-color:#FFFFFF"/>
+	</linearGradient>
+	<path fill="url(#SVGID_13_)" d="M336,41v699c0,12.15-9.85,22-22,22H198c-12.15,0-22-9.85-22-22V484.5c0-3.59,2.91-6.5,6.5-6.5h37
+		c6.627,0,12-6.769,12-15.117V41H336z"/>
+	<linearGradient id="SVGID_14_" gradientUnits="userSpaceOnUse" x1="256" y1="762" x2="256" y2="41.0005">
+		<stop  offset="0" style="stop-color:#B4B4B4"/>
+		<stop  offset="1" style="stop-color:#F0F0F0"/>
+	</linearGradient>
+	<path fill="url(#SVGID_14_)" d="M334,43v697c0,11.028-8.972,20-20,20H198c-11.028,0-20-8.972-20-20V484.5
+		c0-2.481,2.019-4.5,4.5-4.5h37c7.72,0,14-7.679,14-17.117V43H334 M336,41H231.5v421.883c0,8.349-5.373,15.117-12,15.117h-37
+		c-3.59,0-6.5,2.91-6.5,6.5V740c0,12.15,9.85,22,22,22h116c12.15,0,22-9.85,22-22V41L336,41z"/>
+</g>
 </svg>
