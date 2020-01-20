@@ -2,8 +2,15 @@
 
 **WORK IN PROGRESS**
 
+Web component for displaying piano keyboard
 
+Input: number of keys (list of pre-defined configurations)
 
+# TODO
+
+- SVG: Add pushed state for white keys
+
+- SVG: Add black background?
 
 # References
 
