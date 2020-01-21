@@ -30,7 +30,7 @@ Input: number of keys (list of pre-defined configurations)
 
 ### Less popular configurations
 
-- 32: 2 octaves + 8 keys OR 2 octaves + 7 + 1 key
+- 32: 5 keys + 2 octaves + 3 keys OR 2 octaves + 7 + 1 key
 
 - 73: 1 key + 6 octaves OR 6 octaves + 1 key
 
