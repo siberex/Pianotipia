@@ -1,21 +1,21 @@
 <svg version="1.1" id="Keyboard" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 2000 800" xml:space="preserve">
   <defs/>
   <symbol id="BlackKey" viewBox="0 -437 100 437">
-    <path id="Black_Key_2_" d="M100-427c0-5.5-4.5-10-10-10H10c-5.5 0-10 4.5-10 10V0h100v-427z" fill="#333"/>
+    <path d="M100-427c0-5.5-4.5-10-10-10H10c-5.5 0-10 4.5-10 10V0h100v-427z" fill="#333"/>
   </symbol>
   <symbol id="WhiteKey" viewBox="0 -721 160 721">
-    <path id="White_Key_2_" d="M160-711c0-5.5-4.5-10-10-10H10c-5.5 0-10 4.5-10 10V0h160v-711z" fill="#ccc"/>
+    <path d="M160-711c0-5.5-4.5-10-10-10H10c-5.5 0-10 4.5-10 10V0h160v-711z" fill="#ccc"/>
   </symbol>
-  <use xlink:href="#WhiteKey" width="160" height="721" y="-721" transform="matrix(1 0 0 -1 341 41)" overflow="visible"/>
-  <use xlink:href="#WhiteKey" width="160" height="721" y="-721" transform="matrix(1 0 0 -1 506 41)" overflow="visible"/>
-  <use xlink:href="#WhiteKey" width="160" height="721" y="-721" transform="matrix(1 0 0 -1 671 41)" overflow="visible"/>
-  <use xlink:href="#WhiteKey" width="160" height="721" y="-721" transform="matrix(1 0 0 -1 836 41)" overflow="visible"/>
-  <use xlink:href="#WhiteKey" width="160" height="721" y="-721" transform="matrix(1 0 0 -1 1001 41)" overflow="visible"/>
-  <use xlink:href="#WhiteKey" width="160" height="721" y="-721" transform="matrix(1 0 0 -1 1166 41)" overflow="visible"/>
-  <use xlink:href="#WhiteKey" width="160" height="721" y="-721" transform="matrix(1 0 0 -1 1331 41)" overflow="visible"/>
-  <use xlink:href="#BlackKey" width="100" height="437" y="-437" transform="matrix(1 0 0 -1 446 41)" overflow="visible"/>
-  <use xlink:href="#BlackKey" width="100" height="437" y="-437" transform="matrix(1 0 0 -1 626 41)" overflow="visible"/>
-  <use xlink:href="#BlackKey" width="100" height="437" y="-437" transform="matrix(1 0 0 -1 941 41)" overflow="visible"/>
-  <use xlink:href="#BlackKey" width="100" height="437" y="-437" transform="matrix(1 0 0 -1 1114 41)" overflow="visible"/>
-  <use xlink:href="#BlackKey" width="100" height="437" y="-437" transform="matrix(1 0 0 -1 1286 41)" overflow="visible"/>
+  <use xlink:href="#WhiteKey" width="160" height="721" y="-721" transform="matrix(1 0 0 -1 341 41)"/>
+  <use xlink:href="#WhiteKey" width="160" height="721" y="-721" transform="matrix(1 0 0 -1 506 41)"/>
+  <use xlink:href="#WhiteKey" width="160" height="721" y="-721" transform="matrix(1 0 0 -1 671 41)"/>
+  <use xlink:href="#WhiteKey" width="160" height="721" y="-721" transform="matrix(1 0 0 -1 836 41)"/>
+  <use xlink:href="#WhiteKey" width="160" height="721" y="-721" transform="matrix(1 0 0 -1 1001 41)"/>
+  <use xlink:href="#WhiteKey" width="160" height="721" y="-721" transform="matrix(1 0 0 -1 1166 41)"/>
+  <use xlink:href="#WhiteKey" width="160" height="721" y="-721" transform="matrix(1 0 0 -1 1331 41)"/>
+  <use xlink:href="#BlackKey" width="100" height="437" y="-437" transform="matrix(1 0 0 -1 446 41)"/>
+  <use xlink:href="#BlackKey" width="100" height="437" y="-437" transform="matrix(1 0 0 -1 626 41)"/>
+  <use xlink:href="#BlackKey" width="100" height="437" y="-437" transform="matrix(1 0 0 -1 941 41)"/>
+  <use xlink:href="#BlackKey" width="100" height="437" y="-437" transform="matrix(1 0 0 -1 1114 41)"/>
+  <use xlink:href="#BlackKey" width="100" height="437" y="-437" transform="matrix(1 0 0 -1 1286 41)"/>
 </svg>
