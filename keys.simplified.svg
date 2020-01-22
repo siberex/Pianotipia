@@ -1,10 +1,10 @@
-<svg version="1.1" id="Keyboard" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 2000 800" xml:space="preserve">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2000 800">
   <defs/>
   <symbol id="BlackKey" viewBox="0 -437 100 437">
-    <path d="M100-427c0-5.5-4.5-10-10-10H10c-5.5 0-10 4.5-10 10V0h100v-427z" fill="#333"/>
+    <path d="M100-424c0-7.2-5.9-13-13-13H13c-7.2 0-13 5.9-13 13V0h100v-424z" fill="#333"/>
   </symbol>
   <symbol id="WhiteKey" viewBox="0 -721 160 721">
-    <path d="M160-711c0-5.5-4.5-10-10-10H10c-5.5 0-10 4.5-10 10V0h160v-711z" fill="#ccc"/>
+    <path d="M160-701c0-11-9-20-20-20H20c-11 0-20 9-20 20V0h160v-701z" fill="#ccc"/>
   </symbol>
   <use xlink:href="#WhiteKey" width="160" height="721" y="-721" transform="matrix(1 0 0 -1 341 41)"/>
   <use xlink:href="#WhiteKey" width="160" height="721" y="-721" transform="matrix(1 0 0 -1 506 41)"/>
