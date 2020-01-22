@@ -7,7 +7,8 @@
     <title>Piano Board</title>
 </head>
 <body>
-    <script src="node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+    <!-- @fixme Use differential loading to serve ES5 and ES2016-targeted builds for different browsers -->
+    <script src="node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js" nomodule></script>
     <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
 </body>
