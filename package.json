@@ -1,0 +1,9 @@
+{
+  "name": "piano-board",
+  "version": "1.0.0",
+  "description": "Web component for displaying piano keyboard",
+  "main": "index.js",
+  "repository": "git@github.com:siberex/piano-board.git",
+  "author": "Stepan Legachev <piano-board@sib.li>",
+  "license": "MIT"
+}
