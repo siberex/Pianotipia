@@ -4,6 +4,7 @@ import {
     property,
     LitElement,
 } from 'lit-element';
+import {PianoKey} from './piano-key';
 
 @customElement('piano-board')
 export class PianoBoard extends LitElement {
@@ -14,6 +15,6 @@ export class PianoBoard extends LitElement {
     numKeys = 88;
 
     render() {
-        return html`<div></div>`;
+        return html`<piano-key></piano-key>`;
     }
 }
