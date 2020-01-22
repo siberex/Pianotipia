@@ -5,3 +5,5 @@ class PianoBoard extends HTMLElement {
         // ...
     }
 }
+
+customElements.define('piano-board', PianoBoard);

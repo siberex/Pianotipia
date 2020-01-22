@@ -5,3 +5,5 @@ class PianoKey extends HTMLElement {
         // ...
     }
 }
+
+customElements.define('piano-key', PianoKey);
