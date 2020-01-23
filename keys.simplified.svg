@@ -1,20 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2000 800">
-	<symbol id="BlackKey" viewBox="0 0 100 437">
-		<path d="M100,0H0v424c0,7.1,5.8,13,13,13h74c7.1,0,13-5.8,13-13V0z" fill="#333"/>
-	</symbol>
-	<symbol id="WhiteKey" viewBox="0 0 160 721">
-		<path d="M160,0H0v701c0,11,9,20,20,20h120c11,0,20-9,20-20V0z" fill="#ccc"/>
-	</symbol>
-	<use xlink:href="#WhiteKey" width="160" height="721" x="341"/>
-	<use xlink:href="#WhiteKey" width="160" height="721" x="506"/>
-	<use xlink:href="#WhiteKey" width="160" height="721" x="671"/>
-	<use xlink:href="#WhiteKey" width="160" height="721" x="836"/>
-	<use xlink:href="#WhiteKey" width="160" height="721" x="1001"/>
-	<use xlink:href="#WhiteKey" width="160" height="721" x="1166"/>
-	<use xlink:href="#WhiteKey" width="160" height="721" x="1331"/>
-	<use xlink:href="#BlackKey" width="100" height="437" x="446"/>
-	<use xlink:href="#BlackKey" width="100" height="437" x="626"/>
-	<use xlink:href="#BlackKey" width="100" height="437" x="941"/>
-	<use xlink:href="#BlackKey" width="100" height="437" x="1114"/>
-	<use xlink:href="#BlackKey" width="100" height="437" x="1286"/>
+	<defs>
+		<path d="M100 0H0v424c0 7.1 5.8 13 13 13h74c7.1 0 13-5.8 13-13V0z" fill="#333" id="BlackKey"/>
+		<path d="M160 0H0v701c0 11 9 20 20 20h120c11 0 20-9 20-20V0z" fill="#ccc" id="WhiteKey"/>
+	</defs>
+	<use xlink:href="#WhiteKey" x="341"/>
+	<use xlink:href="#WhiteKey" x="506"/>
+	<use xlink:href="#WhiteKey" x="671"/>
+	<use xlink:href="#WhiteKey" x="836"/>
+	<use xlink:href="#WhiteKey" x="1001"/>
+	<use xlink:href="#WhiteKey" x="1166"/>
+	<use xlink:href="#WhiteKey" x="1331"/>
+	<use xlink:href="#BlackKey" x="446"/>
+	<use xlink:href="#BlackKey" x="626"/>
+	<use xlink:href="#BlackKey" x="941"/>
+	<use xlink:href="#BlackKey" x="1114"/>
+	<use xlink:href="#BlackKey" x="1286"/>
 </svg>
