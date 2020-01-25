@@ -4,10 +4,16 @@
   "description": "Web component for displaying piano keyboard",
   "main": "piano-board.js",
   "module": "piano-board.js",
+  "type": "module",
   "repository": "git@github.com:siberex/piano-board.git",
   "author": "Stepan Legachev <piano-board@sib.li>",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start:dev": "es-dev-server"
+  },
   "devDependencies": {
+    "es-dev-server": "^1.36.2",
     "lit-analyzer": "^1.1.9",
     "polymer-cli": "^1.9.11",
     "ts-lit-plugin": "^1.1.9",
