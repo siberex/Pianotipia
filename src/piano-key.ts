@@ -1,7 +1,7 @@
 import {
     customElement,
     html,
-    property,
+    // property,
     LitElement,
 } from 'lit-element';
 

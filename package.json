@@ -18,12 +18,16 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
+    "lint": "lit-analyzer && eslint 'src/**/*.ts'",
     "start:dev": "es-dev-server"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.17.0",
+    "@typescript-eslint/parser": "^2.17.0",
     "es-dev-server": "^1.36.2",
+    "eslint": "^6.8.0",
     "lit-analyzer": "^1.1.9",
-    "polymer-cli": "^1.9.11",
+    "rollup": "^1.29.1",
     "ts-lit-plugin": "^1.1.9",
     "typescript": "^3.7.5",
     "web-component-analyzer": "^1.0.2"
