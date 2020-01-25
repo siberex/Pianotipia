@@ -8,6 +8,9 @@
   "author": "Stepan Legachev <piano-board@sib.li>",
   "license": "MIT",
   "devDependencies": {
+    "lit-analyzer": "^1.1.9",
+    "polymer-cli": "^1.9.11",
+    "ts-lit-plugin": "^1.1.9",
     "typescript": "^3.7.5"
   },
   "dependencies": {
