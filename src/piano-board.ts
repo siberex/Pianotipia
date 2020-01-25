@@ -11,7 +11,7 @@ export class PianoBoard extends LitElement {
     /**
      * Number of keys on keyboard.
      */
-    @property()
+    @property({type: Number})
     numKeys = 88;
 
     render() {

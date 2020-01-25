@@ -11,7 +11,8 @@
     "lit-analyzer": "^1.1.9",
     "polymer-cli": "^1.9.11",
     "ts-lit-plugin": "^1.1.9",
-    "typescript": "^3.7.5"
+    "typescript": "^3.7.5",
+    "web-component-analyzer": "^1.0.2"
   },
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^2.4.1",
