@@ -6,6 +6,14 @@
   "module": "piano-board.js",
   "type": "module",
   "repository": "git@github.com:siberex/piano-board.git",
+  "keywords": [
+    "piano",
+    "piano keyboard",
+    "music",
+    "web component",
+    "lit-element",
+    "typescript"
+  ],
   "author": "Stepan Legachev <piano-board@sib.li>",
   "license": "MIT",
   "scripts": {
