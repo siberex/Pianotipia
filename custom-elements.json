@@ -1,0 +1,28 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "piano-board",
+      "attributes": [
+        {
+          "name": "numKeys",
+          "description": "Number of keys on keyboard.",
+          "type": "number",
+          "default": "88"
+        }
+      ],
+      "properties": [
+        {
+          "name": "numKeys",
+          "attribute": "numKeys",
+          "description": "Number of keys on keyboard.",
+          "type": "number",
+          "default": "88"
+        }
+      ]
+    },
+    {
+      "name": "piano-key"
+    }
+  ]
+}

@@ -17,6 +17,7 @@
   "author": "Stepan Legachev <piano-board@sib.li>",
   "license": "MIT",
   "scripts": {
+    "analyze": "wca analyze 'src/**/*.ts' --outFile custom-elements.json",
     "build": "tsc",
     "lint": "lit-analyzer && eslint 'src/**/*.ts'",
     "start:dev": "es-dev-server"
