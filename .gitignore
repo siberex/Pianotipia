@@ -3,6 +3,7 @@ dist/
 
 # NPM
 node_modules
+yarn-error.log
 
 # misc
 .DS_Store
