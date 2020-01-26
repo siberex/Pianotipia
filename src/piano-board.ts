@@ -13,20 +13,20 @@ export class PianoBoard extends LitElement {
     /**
      * Number of keys on the keyboard.
      */
-    @property({type: Number})
+    @property({type: Number, attribute: 'num-keys'})
     numKeys = 88;
 
     /**
      * Number of octaves on the keyboard.
      */
-    @property({type: Number})
+    @property({attribute: false})
     numOctaves = 0;
 
     constructor() {
         super();
 
-        if (this.numOctaves <= 0) {
-            this.numOctaves = Math.round(this.numKeys / 12);
+        if (this.numOctaves < 1) {
+            this.numOctaves = Math.floor(this.numKeys / 12);
         }
     }
 
@@ -34,7 +34,7 @@ export class PianoBoard extends LitElement {
         // noinspection JSMismatchedCollectionQueryUpdate
         const octaves: TemplateResult[] = [];
         for (let i = 0; i < this.numOctaves; i++) {
-            octaves.push(html`<piano-octave .index=${i}></piano-octave>`);
+            octaves.push(html`<piano-octave index=${i}></piano-octave>`);
         }
 
         return html`<div>${octaves}</div>`;

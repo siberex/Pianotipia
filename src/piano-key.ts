@@ -4,12 +4,13 @@ import {
     property,
     LitElement,
 } from 'lit-element';
+import {classMap} from 'lit-html/directives/class-map';
 
 export enum KeyName {C, Db, D, Eb, E, F, Gb, G, Ab, A, Bb, B}
 
 export interface Key {
     name: string;
-    pressed: boolean;
+    pressed?: boolean;
     standalone?: boolean;
 }
 
@@ -30,6 +31,8 @@ export class PianoKey extends LitElement implements Key {
     standalone = false;
 
     render() {
-        return html`<strong>${this.name}</strong>`;
+        const classes = {pressed: this.pressed, standalone: this.standalone};
+
+        return html`<span class=${classMap(classes)}>${this.name}</span>`;
     }
 }

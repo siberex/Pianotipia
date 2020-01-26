@@ -11,6 +11,7 @@ export interface Octave {
     index: number;
     start: number;
     length: number;
+    pressed: string[];
     keys: Key[];
 }
 
@@ -27,17 +28,21 @@ export class PianoOctave extends LitElement implements Octave {
      * Starting note of octave (provided as key index).
      * Indices are starting at 0 (note C).
      * To start octave at Gb, start = 6.
+     * @fixme change to string
      */
     @property({type: Number})
     start = 0;
 
     /**
-     * Number of key in the octave (12 by default).
+     * Number of keys in the octave (12 by default).
      */
     @property({type: Number})
     length = 12;
 
     @property({type: Array})
+    pressed: string[] = [];
+
+    @property({attribute: false})
     keys: Key[];
 
     constructor() {
@@ -63,19 +68,26 @@ export class PianoOctave extends LitElement implements Octave {
             this.length = 12 - this.start;
         }
 
-        this.keys = [...Array(this.length).keys()].map(
-            i => ({
-                name: KeyName[i + this.start % 12],
-                pressed: false,
-                standalone: this.length == 1
-            })
-        );
+        // @fixme normalize names
+        const pressedMap: Map<string, boolean> = new Map( this.pressed.map(v => [v, true]) );
+
+        this.keys = [...Array(this.length).keys()].map(i => {
+            const name = KeyName[i + this.start % 12];
+            const key: Key = {name};
+            if (this.length == 1) {
+                key.standalone = true;
+            }
+            if ( pressedMap.has(name) ) {
+                key.pressed = true;
+            }
+            return key;
+        });
     }
 
     render() {
         return html`
             ${repeat(this.keys, (key: Key) => key.name, (key: Key) => html`
-                <piano-key .name=${key.name} .pressed=${key.pressed} .standalone=${key.standalone as boolean}></piano-key>
+                <piano-key name=${key.name} ?pressed=${key.pressed as boolean} ?standalone=${key.standalone as boolean}></piano-key>
             `)}
         `;
     }
