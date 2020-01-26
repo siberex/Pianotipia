@@ -12,6 +12,15 @@ Input: number of keys (list of pre-defined configurations)
 
 - SVG: Add black background?
 
+
+# Development web-server
+
+```bash
+yarn build:watch
+yarn start:dev
+```
+
+
 # References
 
 ## Common keyboard sizes by number of keys / octaves

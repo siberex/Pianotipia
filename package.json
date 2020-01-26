@@ -18,6 +18,7 @@
   "scripts": {
     "analyze": "wca analyze 'src/**/*.ts' --outFile custom-elements.json",
     "build": "tsc",
+    "build:watch": "tsc --watch",
     "lint": "lit-analyzer && eslint 'src/**/*.ts'",
     "start:dev": "es-dev-server"
   },
