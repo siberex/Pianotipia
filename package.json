@@ -4,7 +4,6 @@
   "description": "Web component for displaying piano keyboard",
   "main": "piano-board.js",
   "module": "piano-board.js",
-  "type": "module",
   "repository": "git@github.com:siberex/piano-board.git",
   "keywords": [
     "piano",

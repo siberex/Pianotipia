@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 module.exports = {
     port: 8080,
     http2: true,
