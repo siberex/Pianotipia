@@ -41,13 +41,34 @@ export class PianoKey extends LitElement implements Key {
 
     static styles = css`
         :host {
-            display: inline-block;
-            width: 15px;
+            display: block;
+            float: left;
+            position: relative;
+        }
+        div {
+            position: relative;
+            width: 18px;
             height: 100px;
+            color: black;
+            background-color: white;
             border: solid 1px gray;
-            font-size: 10px;
-            padding: 2px;
-            margin: 0;
+            z-index: 1;
+        }
+        .black {
+            position: absolute;
+            height: 50px;
+            left: -9px;
+            color: white;
+            background-color: black;
+            z-index: 2;
+        }
+        span {
+          position: absolute;
+          bottom: 2px;
+          left: 0;
+          right: 0;
+          font-size: 10px;
+          text-align: center;
         }
     `;
 
