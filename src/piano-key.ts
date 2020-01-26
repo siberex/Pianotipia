@@ -10,7 +10,7 @@ export enum KeyName {C, Db, D, Eb, E, F, Gb, G, Ab, A, Bb, B}
 export interface Key {
     name: string;
     pressed: boolean;
-    standalone: boolean;
+    standalone?: boolean;
 }
 
 @customElement('piano-key')
