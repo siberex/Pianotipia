@@ -4,6 +4,7 @@ import {
     property,
     LitElement,
 } from 'lit-element';
+import {repeat} from 'lit-html/directives/repeat';
 import {Key, KeyName} from './piano-key';
 
 export interface Octave {
@@ -65,12 +66,17 @@ export class PianoOctave extends LitElement implements Octave {
         this.keys = [...Array(this.length).keys()].map(
             i => ({
                 name: KeyName[i + this.start % 12],
-                pressed: false
+                pressed: false,
+                standalone: this.length == 1
             })
         );
     }
 
     render() {
-        return html`<piano-key></piano-key>`;
+        return html`
+            ${repeat(this.keys, (key: Key) => key.name, (key: Key) => html`
+                <piano-key .name=${key.name} .pressed=${key.pressed} .standalone=${key.standalone as boolean}></piano-key>
+            `)}
+        `;
     }
 }
