@@ -1,4 +1,5 @@
 import {
+    css,
     customElement,
     html,
     property,
@@ -29,6 +30,18 @@ export class PianoKey extends LitElement implements Key {
      */
     @property({type: Boolean})
     standalone = false;
+
+    static styles = css`
+        :host {
+            display: inline-block;
+            width: 15px;
+            height: 100px;
+            border: solid 1px gray;
+            font-size: 10px;
+            padding: 2px;
+            margin: 0;
+        }
+    `;
 
     render() {
         const classes = {pressed: this.pressed, standalone: this.standalone};

@@ -1,4 +1,5 @@
 import {
+    css,
     customElement,
     html,
     property,
@@ -84,8 +85,17 @@ export class PianoOctave extends LitElement implements Octave {
         });
     }
 
+
+    static styles = css`
+        :host {
+            display: inline-block;
+            margin-top: 10px;
+        }
+    `;
+
     render() {
         return html`
+            ${this.index}:
             ${repeat(this.keys, (key: Key) => key.name, (key: Key) => html`
                 <piano-key name=${key.name} ?pressed=${key.pressed as boolean} ?standalone=${key.standalone as boolean}></piano-key>
             `)}
