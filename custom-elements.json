@@ -2,27 +2,134 @@
   "version": "experimental",
   "tags": [
     {
+      "name": "piano-key",
+      "attributes": [
+        {
+          "name": "name",
+          "type": "string",
+          "default": "\"C\""
+        },
+        {
+          "name": "pressed",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "standalone",
+          "description": "Flag to render stand-alone full-size white keys, located at the end of the keyboard.\nOr, in rare cases, at the start of it (like on Yamaha P-121, Casio WK-6600 or Nord Stage 3 Compact).",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "name",
+          "attribute": "name",
+          "type": "string",
+          "default": "\"C\""
+        },
+        {
+          "name": "pressed",
+          "attribute": "pressed",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "standalone",
+          "attribute": "standalone",
+          "description": "Flag to render stand-alone full-size white keys, located at the end of the keyboard.\nOr, in rare cases, at the start of it (like on Yamaha P-121, Casio WK-6600 or Nord Stage 3 Compact).",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "name": "piano-octave",
+      "attributes": [
+        {
+          "name": "index",
+          "description": "Octave position on the keyboard.",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "start",
+          "description": "Starting note of octave (provided as key index).\nIndices are starting at 0 (note C).\nTo start octave at Gb, start = 6.",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "length",
+          "description": "Number of key in the octave (12 by default).",
+          "type": "number",
+          "default": "12"
+        },
+        {
+          "name": "keys",
+          "type": "Key[]"
+        }
+      ],
+      "properties": [
+        {
+          "name": "index",
+          "attribute": "index",
+          "description": "Octave position on the keyboard.",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "start",
+          "attribute": "start",
+          "description": "Starting note of octave (provided as key index).\nIndices are starting at 0 (note C).\nTo start octave at Gb, start = 6.",
+          "type": "number",
+          "default": "0"
+        },
+        {
+          "name": "length",
+          "attribute": "length",
+          "description": "Number of key in the octave (12 by default).",
+          "type": "number",
+          "default": "12"
+        },
+        {
+          "name": "keys",
+          "attribute": "keys",
+          "type": "Key[]"
+        }
+      ]
+    },
+    {
       "name": "piano-board",
       "attributes": [
         {
           "name": "numKeys",
-          "description": "Number of keys on keyboard.",
+          "description": "Number of keys on the keyboard.",
           "type": "number",
           "default": "88"
+        },
+        {
+          "name": "numOctaves",
+          "description": "Number of octaves on the keyboard.",
+          "type": "number",
+          "default": "0"
         }
       ],
       "properties": [
         {
           "name": "numKeys",
           "attribute": "numKeys",
-          "description": "Number of keys on keyboard.",
+          "description": "Number of keys on the keyboard.",
           "type": "number",
           "default": "88"
+        },
+        {
+          "name": "numOctaves",
+          "attribute": "numOctaves",
+          "description": "Number of octaves on the keyboard.",
+          "type": "number",
+          "default": "0"
         }
       ]
-    },
-    {
-      "name": "piano-key"
     }
   ]
 }
