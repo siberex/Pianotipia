@@ -95,6 +95,7 @@ export class PianoOctave extends LitElement implements Octave {
             position: absolute;            
             font-size: 10px;
             margin-left: 2px;
+            z-index: 3;
         }
     `;
 

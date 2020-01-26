@@ -46,7 +46,6 @@ export class PianoKey extends LitElement implements Key {
             position: relative;
         }
         div {
-            position: relative;
             width: 18px;
             height: 100px;
             color: black;
@@ -63,12 +62,12 @@ export class PianoKey extends LitElement implements Key {
             z-index: 2;
         }
         span {
-          position: absolute;
-          bottom: 2px;
-          left: 0;
-          right: 0;
-          font-size: 10px;
-          text-align: center;
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            right: 0;
+            font-size: 10px;
+            text-align: center;
         }
     `;
 
