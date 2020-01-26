@@ -43,22 +43,28 @@ export class PianoOctave extends LitElement implements Octave {
         super();
 
         // Sanity checks
-        if (this.index < 0) {
+
+        // Total number of octaves usually does not exceed 11 (for 122-key organ)
+        if (this.index < 0 || this.index > 10) {
             this.index = 0;
         }
 
-        if (this.start >= this.length || this.start < 0) {
+        if (this.length < 1 || this.length > 12) {
+            this.length = 12;
+        }
+
+        if (this.start < 0 || this.start > 11) {
             this.start = 0;
         }
 
-        if (this.length < 0 || this.length > 12) {
-            this.length = 0;
+        // Octave starting at note A will contain 3 keys total
+        if (this.start > 0) {
+            this.length = 12 - this.start;
         }
-
 
         this.keys = [...Array(this.length).keys()].map(
             i => ({
-                name: KeyName[i + this.start % this.length],
+                name: KeyName[i + this.start % 12],
                 pressed: false
             })
         );
