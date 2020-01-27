@@ -2,7 +2,9 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -10,9 +12,15 @@
     "sourceType": "module"
   },
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "prettier"
   ],
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
   "rules": {
+    "prettier/prettier": ["error"],
     "@typescript-eslint/explicit-function-return-type": "off"
   }
 }

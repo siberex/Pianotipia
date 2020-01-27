@@ -28,6 +28,8 @@
     "@typescript-eslint/parser": "^2.18.0",
     "es-dev-server": "^1.36.3",
     "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-prettier": "^3.1.2",
     "lit-analyzer": "^1.1.9",
     "prettier": "^1.19.1",
     "rollup": "^1.30.1",
