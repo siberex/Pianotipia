@@ -7,7 +7,7 @@
         {
           "name": "name",
           "type": "string",
-          "default": "\"C\""
+          "default": "\"KeyName[KeyName.C]\""
         },
         {
           "name": "pressed",
@@ -26,7 +26,7 @@
           "name": "name",
           "attribute": "name",
           "type": "string",
-          "default": "\"C\""
+          "default": "\"KeyName[KeyName.C]\""
         },
         {
           "name": "pressed",
@@ -60,13 +60,14 @@
         },
         {
           "name": "length",
-          "description": "Number of key in the octave (12 by default).",
+          "description": "Number of keys in the octave (12 by default).",
           "type": "number",
           "default": "12"
         },
         {
-          "name": "keys",
-          "type": "Key[]"
+          "name": "pressed",
+          "type": "string[]",
+          "default": "[]"
         }
       ],
       "properties": [
@@ -87,13 +88,18 @@
         {
           "name": "length",
           "attribute": "length",
-          "description": "Number of key in the octave (12 by default).",
+          "description": "Number of keys in the octave (12 by default).",
           "type": "number",
           "default": "12"
         },
         {
+          "name": "pressed",
+          "attribute": "pressed",
+          "type": "string[]",
+          "default": "[]"
+        },
+        {
           "name": "keys",
-          "attribute": "keys",
           "type": "Key[]"
         }
       ]
@@ -102,29 +108,22 @@
       "name": "piano-board",
       "attributes": [
         {
-          "name": "numKeys",
+          "name": "num-keys",
           "description": "Number of keys on the keyboard.",
           "type": "number",
           "default": "88"
-        },
-        {
-          "name": "numOctaves",
-          "description": "Number of octaves on the keyboard.",
-          "type": "number",
-          "default": "0"
         }
       ],
       "properties": [
         {
           "name": "numKeys",
-          "attribute": "numKeys",
+          "attribute": "num-keys",
           "description": "Number of keys on the keyboard.",
           "type": "number",
           "default": "88"
         },
         {
           "name": "numOctaves",
-          "attribute": "numOctaves",
           "description": "Number of octaves on the keyboard.",
           "type": "number",
           "default": "0"
