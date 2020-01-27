@@ -1,13 +1,20 @@
-import {
-    css,
-    customElement,
-    html,
-    property,
-    LitElement,
-} from 'lit-element';
+import {css, customElement, html, property, LitElement} from 'lit-element';
 import {classMap} from 'lit-html/directives/class-map';
 
-export enum KeyName {C, Db, D, Eb, E, F, Gb, G, Ab, A, Bb, B}
+export enum KeyName {
+    C,
+    Db,
+    D,
+    Eb,
+    E,
+    F,
+    Gb,
+    G,
+    Ab,
+    A,
+    Bb,
+    B,
+}
 
 const blackKeysMap: Map<string, boolean> = new Map([
     [KeyName[KeyName.Db], true],
@@ -25,7 +32,6 @@ export interface Key {
 
 @customElement('piano-key')
 export class PianoKey extends LitElement implements Key {
-
     @property({type: String})
     name = KeyName[KeyName.C];
 
@@ -72,12 +78,18 @@ export class PianoKey extends LitElement implements Key {
     `;
 
     render() {
-        const classes = {pressed: this.pressed, standalone: this.standalone, black: false};
+        const classes = {
+            pressed: this.pressed,
+            standalone: this.standalone,
+            black: false,
+        };
 
-        if ( blackKeysMap.has(this.name) ) {
+        if (blackKeysMap.has(this.name)) {
             classes['black'] = true;
         }
 
-        return html`<div class=${classMap(classes)}><span>${this.name}</span></div>`;
+        return html`
+            <div class=${classMap(classes)}><span>${this.name}</span></div>
+        `;
     }
 }

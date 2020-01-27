@@ -5,11 +5,10 @@ import {
     LitElement,
     TemplateResult,
 } from 'lit-element';
-import "./piano-octave";
+import './piano-octave';
 
 @customElement('piano-board')
 export class PianoBoard extends LitElement {
-
     /**
      * Number of keys on the keyboard.
      */
@@ -34,9 +33,15 @@ export class PianoBoard extends LitElement {
         // noinspection JSMismatchedCollectionQueryUpdate
         const octaves: TemplateResult[] = [];
         for (let i = 0; i < this.numOctaves; i++) {
-            octaves.push(html`<piano-octave index=${i}></piano-octave>`);
+            octaves.push(
+                html`
+                    <piano-octave index=${i}></piano-octave>
+                `,
+            );
         }
 
-        return html`<div>${octaves}</div>`;
+        return html`
+            <div>${octaves}</div>
+        `;
     }
 }

@@ -1,10 +1,4 @@
-import {
-    css,
-    customElement,
-    html,
-    property,
-    LitElement,
-} from 'lit-element';
+import {css, customElement, html, property, LitElement} from 'lit-element';
 import {repeat} from 'lit-html/directives/repeat';
 import {Key, KeyName} from './piano-key';
 
@@ -18,7 +12,6 @@ export interface Octave {
 
 @customElement('piano-octave')
 export class PianoOctave extends LitElement implements Octave {
-
     /**
      * Octave position on the keyboard.
      */
@@ -70,21 +63,22 @@ export class PianoOctave extends LitElement implements Octave {
         }
 
         // @fixme normalize names
-        const pressedMap: Map<string, boolean> = new Map( this.pressed.map(v => [v, true]) );
+        const pressedMap: Map<string, boolean> = new Map(
+            this.pressed.map(v => [v, true]),
+        );
 
         this.keys = [...Array(this.length).keys()].map(i => {
-            const name = KeyName[i + this.start % 12];
+            const name = KeyName[(i + this.start) % 12];
             const key: Key = {name};
             if (this.length == 1) {
                 key.standalone = true;
             }
-            if ( pressedMap.has(name) ) {
+            if (pressedMap.has(name)) {
                 key.pressed = true;
             }
             return key;
         });
     }
-
 
     static styles = css`
         :host {
@@ -92,7 +86,7 @@ export class PianoOctave extends LitElement implements Octave {
             margin-top: 10px;
         }
         span {
-            position: absolute;            
+            position: absolute;
             font-size: 10px;
             margin-left: 2px;
             z-index: 3;
@@ -102,9 +96,17 @@ export class PianoOctave extends LitElement implements Octave {
     render() {
         return html`
             <span>${this.index + 1}</span>
-            ${repeat(this.keys, (key: Key) => key.name, (key: Key) => html`
-                <piano-key name=${key.name} ?pressed=${key.pressed as boolean} ?standalone=${key.standalone as boolean}></piano-key>
-            `)}
+            ${repeat(
+                this.keys,
+                (key: Key) => key.name,
+                (key: Key) => html`
+                    <piano-key
+                        name=${key.name}
+                        ?pressed=${key.pressed as boolean}
+                        ?standalone=${key.standalone as boolean}
+                    ></piano-key>
+                `,
+            )}
         `;
     }
 }
