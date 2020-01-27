@@ -20,6 +20,7 @@
     "build": "tsc",
     "build:watch": "tsc --watch",
     "lint": "lit-analyzer && eslint 'src/**/*.ts'",
+    "format": "prettier src/* --write",
     "start:dev": "es-dev-server"
   },
   "devDependencies": {
@@ -28,6 +29,7 @@
     "es-dev-server": "^1.36.3",
     "eslint": "^6.8.0",
     "lit-analyzer": "^1.1.9",
+    "prettier": "^1.19.1",
     "rollup": "^1.30.1",
     "ts-lit-plugin": "^1.1.9",
     "typescript": "^3.7.5",
