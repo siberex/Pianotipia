@@ -12,7 +12,10 @@ export class PianoBoard extends LitElement {
     /**
      * Number of keys on the keyboard.
      */
-    @property({type: Number, attribute: 'num-keys'})
+    @property({
+        type: Number,
+        attribute: 'num-keys',
+    })
     numKeys = 88;
 
     /**
@@ -24,6 +27,7 @@ export class PianoBoard extends LitElement {
     constructor() {
         super();
 
+        this.numKeys = 88;
         if (this.numOctaves < 1) {
             this.numOctaves = Math.floor(this.numKeys / 12);
         }

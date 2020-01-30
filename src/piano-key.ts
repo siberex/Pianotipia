@@ -41,9 +41,11 @@ const blackKeysMap: Map<KeyName, boolean> = new Map([
 
 /**
  * Normalize key index within octave (-5 → 0, 13 → 1, 4 → 4)
+ *
+ * @fixme add unit tests
  * @param index
  */
-export function fromIndex(index: number): KeyName {
+export function normalizeIndex(index: number): KeyName {
     const indexList = [...Array(12).keys()];
     if (index < 0) {
         return KeyName.C;
@@ -82,23 +84,32 @@ export function fromName(note: string): KeyName | undefined {
 
 /**
  * Convert key index within octave to key name
+ *
+ * @fixme add unit tests
  * @param key
  */
-export function toName(key: KeyName): string | undefined {
+export function toName(key: KeyName): string {
     const names = indexMap.get(key);
-    return names && names.length ? names[0].toUpperCase() : undefined;
+    return names && names.length ? names[0].toUpperCase() : '';
 }
 
 export interface Key {
-    name: KeyName;
+    index: KeyName;
     pressed?: boolean;
     standalone?: boolean;
 }
 
 @customElement('piano-key')
 export class PianoKey extends LitElement implements Key {
-    @property({type: String})
-    name = KeyName[KeyName.C];
+    @property({
+        type: Number,
+        converter: {
+            fromAttribute: (value: string) => fromName(value),
+            toAttribute: (value: KeyName) => toName(value),
+        },
+        attribute: 'name',
+    })
+    index = KeyName.C;
 
     @property({type: Boolean})
     pressed = false;
@@ -109,6 +120,12 @@ export class PianoKey extends LitElement implements Key {
      */
     @property({type: Boolean})
     standalone = false;
+
+    constructor() {
+        super();
+
+        this.index = 0;
+    }
 
     static styles = css`
         :host {
@@ -149,13 +166,13 @@ export class PianoKey extends LitElement implements Key {
             black: false,
         };
 
-        if (blackKeysMap.has(this.name)) {
+        if (blackKeysMap.has(this.index)) {
             classes['black'] = true;
         }
 
         return html`
             <div class=${classMap(classes)}>
-                <span>${toName(this.name)}</span>
+                <span>${toName(this.index)}</span>
             </div>
         `;
     }

@@ -1,6 +1,6 @@
 import {css, customElement, html, property, LitElement} from 'lit-element';
 import {repeat} from 'lit-html/directives/repeat';
-import {Key, KeyName} from './piano-key';
+import {normalizeIndex, fromName, Key, KeyName} from './piano-key';
 
 export interface Octave {
     index: number;
@@ -62,18 +62,17 @@ export class PianoOctave extends LitElement implements Octave {
             this.length = 12 - this.start;
         }
 
-        // @fixme normalize names
-        const pressedMap: Map<string, boolean> = new Map(
-            this.pressed.map(v => [v, true]),
+        const pressedMap: Map<KeyName | undefined, boolean> = new Map(
+            this.pressed.map(v => [fromName(v), true]),
         );
 
         this.keys = [...Array(this.length).keys()].map(i => {
-            const name = KeyName[(i + this.start) % 12];
-            const key: Key = {name};
+            const keyIndex = normalizeIndex(i + this.start);
+            const key: Key = {index: keyIndex};
             if (this.length == 1) {
                 key.standalone = true;
             }
-            if (pressedMap.has(name)) {
+            if (pressedMap.has(keyIndex)) {
                 key.pressed = true;
             }
             return key;
@@ -98,10 +97,10 @@ export class PianoOctave extends LitElement implements Octave {
             <span>${this.index + 1}</span>
             ${repeat(
                 this.keys,
-                (key: Key) => key.name,
+                (key: Key) => key.index,
                 (key: Key) => html`
                     <piano-key
-                        name=${key.name}
+                        .index=${key.index}
                         ?pressed=${key.pressed as boolean}
                         ?standalone=${key.standalone as boolean}
                     ></piano-key>
