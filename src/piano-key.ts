@@ -16,6 +16,21 @@ export const enum KeyName {
     B,
 }
 
+const indexMap: Map<KeyName, Array<string>> = new Map([
+    [KeyName.C, ['c', 'b#', 'b♯', 'bs']],
+    [KeyName.Db, ['d♭', 'c♯', 'cs', 'c#', 'db']],
+    [KeyName.D, ['d']],
+    [KeyName.Eb, ['e♭', 'd♯', 'ds', 'd#', 'eb']],
+    [KeyName.E, ['e', 'fb', 'f♭']],
+    [KeyName.F, ['f', 'e#', 'e♯', 'es']],
+    [KeyName.Gb, ['g♭', 'f♯', 'fs', 'f#', 'gb']],
+    [KeyName.G, ['g']],
+    [KeyName.Ab, ['a♭', 'g♯', 'gs', 'g#', 'ab']],
+    [KeyName.A, ['a']],
+    [KeyName.Bb, ['b♭', 'a♯', 'as', 'a#', 'bb']],
+    [KeyName.B, ['b', 'cb', 'c♭']],
+]);
+
 const blackKeysMap: Map<KeyName, boolean> = new Map([
     [KeyName.Db, true],
     [KeyName.Eb, true],
@@ -23,6 +38,56 @@ const blackKeysMap: Map<KeyName, boolean> = new Map([
     [KeyName.Ab, true],
     [KeyName.Bb, true],
 ]);
+
+/**
+ * Normalize key index within octave (-5 → 0, 13 → 1, 4 → 4)
+ * @param index
+ */
+export function fromIndex(index: number): KeyName {
+    const indexList = [...Array(12).keys()];
+    if (index < 0) {
+        return KeyName.C;
+    }
+    return indexList[index % 12];
+}
+
+/**
+ * Normalize key name and return it’s index within octave:
+ * 'd#' → 3, 'Ab' → 8, 'D4' → 2, 'b♭' → 10, 'F♯2' → 5, 'z GB.' → 6
+ *
+ * @fixme add unit tests
+ * @param note
+ */
+export function fromName(note: string): KeyName | undefined {
+    const disallowedChars = new RegExp('[^a-g♭s♯#]');
+
+    const noteMap: Record<string, KeyName> = {};
+
+    for (const [keyIndex, keyNames] of indexMap) {
+        keyNames.map(v => {
+            noteMap[v] = keyIndex;
+        });
+    }
+
+    const normalizedInput = note
+        .toString()
+        .normalize('NFC')
+        .trim()
+        .toLowerCase()
+        .replace(disallowedChars, '')
+        .substring(0, 2);
+
+    return noteMap[normalizedInput];
+}
+
+/**
+ * Convert key index within octave to key name
+ * @param key
+ */
+export function toName(key: KeyName): string | undefined {
+    const names = indexMap.get(key);
+    return names && names.length ? names[0].toUpperCase() : undefined;
+}
 
 export interface Key {
     name: KeyName;
@@ -89,7 +154,9 @@ export class PianoKey extends LitElement implements Key {
         }
 
         return html`
-            <div class=${classMap(classes)}><span>${this.name}</span></div>
+            <div class=${classMap(classes)}>
+                <span>${toName(this.name)}</span>
+            </div>
         `;
     }
 }
