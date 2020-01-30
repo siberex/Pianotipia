@@ -1,7 +1,7 @@
 import {css, customElement, html, property, LitElement} from 'lit-element';
 import {classMap} from 'lit-html/directives/class-map';
 
-export enum KeyName {
+export const enum KeyName {
     C,
     Db,
     D,
@@ -16,16 +16,16 @@ export enum KeyName {
     B,
 }
 
-const blackKeysMap: Map<string, boolean> = new Map([
-    [KeyName[KeyName.Db], true],
-    [KeyName[KeyName.Eb], true],
-    [KeyName[KeyName.Gb], true],
-    [KeyName[KeyName.Ab], true],
-    [KeyName[KeyName.Bb], true],
+const blackKeysMap: Map<KeyName, boolean> = new Map([
+    [KeyName.Db, true],
+    [KeyName.Eb, true],
+    [KeyName.Gb, true],
+    [KeyName.Ab, true],
+    [KeyName.Bb, true],
 ]);
 
 export interface Key {
-    name: string;
+    name: KeyName;
     pressed?: boolean;
     standalone?: boolean;
 }
