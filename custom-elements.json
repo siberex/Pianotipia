@@ -6,8 +6,8 @@
       "attributes": [
         {
           "name": "name",
-          "type": "string",
-          "default": "\"KeyName[KeyName.C]\""
+          "type": "KeyName",
+          "default": "\"KeyName.C\""
         },
         {
           "name": "pressed",
@@ -23,10 +23,10 @@
       ],
       "properties": [
         {
-          "name": "name",
+          "name": "index",
           "attribute": "name",
-          "type": "string",
-          "default": "\"KeyName[KeyName.C]\""
+          "type": "KeyName",
+          "default": "\"KeyName.C\""
         },
         {
           "name": "pressed",
@@ -116,17 +116,17 @@
       ],
       "properties": [
         {
+          "name": "numOctaves",
+          "description": "Number of octaves on the keyboard.",
+          "type": "number",
+          "default": "0"
+        },
+        {
           "name": "numKeys",
           "attribute": "num-keys",
           "description": "Number of keys on the keyboard.",
           "type": "number",
           "default": "88"
-        },
-        {
-          "name": "numOctaves",
-          "description": "Number of octaves on the keyboard.",
-          "type": "number",
-          "default": "0"
         }
       ]
     }
