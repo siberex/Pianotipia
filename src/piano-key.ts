@@ -148,6 +148,7 @@ export class PianoKey extends LitElement implements Key {
             color: white;
             background-color: black;
             z-index: 2;
+            letter-spacing: -3px;
         }
         span {
             position: absolute;
